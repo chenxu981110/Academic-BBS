@@ -1,0 +1,200 @@
+.groups {
+	.input-group {
+		#search-button {
+			padding-left: 0;
+			position: relative;
+			left: -20px;
+			z-index: 2;
+			vertical-align: middle;
+		}
+	}
+
+	.fg-line {
+		padding-right: 0;
+	}
+
+	&.list {
+		.members {
+			padding-left: 0;
+			margin-bottom: 0;
+
+			li {
+				display: inline;
+			}
+
+			.user-icon, .user-avatar {
+				.user-icon(32px, 1.4rem);
+			}
+		}
+
+		.group-cover {
+			min-height: 150px;
+		}
+
+		.list-cover {
+			display: block;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.card-footer {
+			text-align: center;
+		}
+	}
+
+	&.details {
+
+		.table {
+			margin-bottom: 0;
+
+			>tbody {
+				>tr:not(:first-child)>td {
+					border-top: 1px solid @border-color;
+				}
+
+				>tr:first-child>td {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+.group-details {
+	h2 {
+		margin-top: 0;
+		font-size: 25px;
+	}
+
+	button, a {
+		margin-top: -30px;
+	}
+}
+
+[component="groups/activity"] {
+	&.card-body.card-padding {
+		padding-top: 0;
+	}
+}
+
+.group-members, .members-invited {
+	.fg-line {
+		margin-bottom: 10px;
+	}
+}
+
+
+@media (max-width: @screen-xs-max) {
+	.row.groups .col-lg-8 {
+		margin-top: 10px;
+	}
+
+	.row.groups .col-xs-5 {
+		padding-right: 5px;
+		padding-left: 0;
+	}
+
+	.row.groups .col-xs-7 {
+		padding-left: 5px;
+	}
+}
+
+[component="groups/container"] {
+	.card.user-profile-view {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	[component="groups/cover"] {
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 200px;
+		position: relative;
+		margin-bottom: 1em;
+
+		&:hover {
+			.controls {
+				.opacity(0.8);
+			}
+		}
+
+		.controls {
+			text-align: center;
+			height: 200px;
+			line-height: 200px;
+			.opacity(0);
+			.transition(opacity .15s linear);
+			cursor: pointer;
+			pointer-events: none;
+
+			> * {
+				pointer-events: all;
+			}
+
+			.fa {
+				color: white;
+				background-color: #333;
+				opacity: 1;
+				margin: 15px;
+				padding: 5px;
+			}
+		}
+
+		&.active {
+			&:hover {
+				cursor: move;
+			}
+
+			.controls {
+				> * {
+					display: none;
+				}
+			}
+
+			.save {
+				display: inline-block;
+			}
+		}
+
+		&.saving {
+			.save {
+				display: none;
+			}
+
+			.indicator {
+				display: inline-block;
+			}
+		}
+
+		.save, .indicator {
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			right: 2em;
+			opacity: 1;
+			background-color: @brand-primary;
+			color: #eee;
+			padding: 0.5em;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: none;
+		}
+	}
+
+	.card-body.card-padding {
+		@media (min-width: @screen-md-min) {
+			padding: 18px;
+		}
+	}
+}

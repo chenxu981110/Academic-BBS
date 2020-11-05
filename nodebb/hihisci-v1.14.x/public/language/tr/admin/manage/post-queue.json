@@ -1,0 +1,11 @@
+{
+	"post-queue": "İleti Kuyruğu",
+	"description": "İleti kuyruğunda hiçbir ileti bulunmamaktadır. <br> Bu özelliği aktifleştirmek için, şuraya gidin <a href=\"%1\">Ayarlar &rarr; İleti &rarr; İleti Kuyruğu</a> ve şu özelliği aktifleştirin:  <strong>İleti Kuyruğu</strong>.",
+	"user": "Kullanıcı",
+	"category": "Kategori",
+	"title": "Başlık",
+	"content": "İçerik",
+	"posted": "Gönderildi",
+	"reply-to": "\"%1\"'e Cevap Ver",
+	"content-editable": "Göndermeden önce her bir içeriğe tıklayıp düzenleyebilirsiniz."
+}

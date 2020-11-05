@@ -1,0 +1,34 @@
+.no-select {
+	.user-select(none);
+}
+
+.pointer {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.inline-block {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.user-avatar (@size) {
+	width: @size;
+	height: @size;
+	.border-radius(50%);
+}
+
+.user-icon (@size, @font-size) {
+	.user-avatar(@size);
+	line-height: @size;
+	font-size: @font-size;
+}

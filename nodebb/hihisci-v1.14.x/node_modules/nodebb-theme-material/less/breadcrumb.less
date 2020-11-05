@@ -1,0 +1,24 @@
+.breadcrumb {
+	border: @breadcrumb-border;
+	background-color: @breadcrumb-bg-color;
+	border-radius: 0;
+	margin-bottom: 15px;
+	font-size: 13px;
+
+	>.active {
+		color: @breadcrumb-active-color;
+	}
+
+	li {
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.breadcrumb {
+		padding: 15px 20px 10px;
+	}
+}

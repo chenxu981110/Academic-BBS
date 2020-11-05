@@ -1,0 +1,7 @@
+{
+    "id": "nodebb-theme-material",
+    "name": "Material Design",
+    "description": "Material Design Theme for NodeBB",
+    "url": "https://github.com/pichalite/nodebb-theme-material",
+    "screenshot": "screenshot.png"
+}
